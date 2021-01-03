@@ -1,0 +1,100 @@
+
+Color:
+
+blue text: #0C5E95
+blue bg: 0C5E95
+
+top link color: #306184
+
+light grey bg: #E5E5E5
+
+card bg: CFECFF
+
+copyright bg color: #EFAA2B
+copyright text: #0B2B3F
+
+Font:
+Roboto: normal, 400, 500, 700, 
+Racing Sans One: normal
+
+
+
+
+
+Links:
+http://ambikapur.hchcmission.in
+
+Fonts:
+Racing Sans One - 400
+Roboto - 400, 500, 700
+
+
+
+
+
+Links:
+About us
+Appointments
+Programs for the poor
+Locate us
+Join our team
+Contact us
+------------------
+Department & doctors
+--
+General Surgery
+General Medicine
+Obstetrics and Gynecology
+Orthopedics
+Pediatrics
+Burn Unit
+Dentistry
+Psychology Department
+Audiology Department
+Anaesthesiology
+Recruitment Department
+Pathology
+Radiology
+Casualty
+--
+
+Facilities & services
+--
+Operation Theaters
+24/7 Emergency Services
+Out-Patient Services
+In-Patient Services
+Nursing services
+Community Health Programmes
+Pastoral care
+Laboratory
+Transfusion Services - Blood Bank
+Micro Biology & Histopathology
+Intensive Care Unit
+
+Neonatal & paediatric ICUs
+CT scan
+Dialysis unit
+Radiology
+Pharmacy
+Endoscopy
+Ultrasonography
+Physiotherapy
+Dietetics and Nutrition
+Canteen
+
+--
+Patients & visitors
+-------------------
+Education
+HCHC mission
+------------------
+
+
+Address:
+Holy Cross Hospital
+Ambikapur, Surguja Dt. 
+Chhattisgarh - 497 001
+
+Tel: 07774 -223 733 
+Mob: 09752-823-555
