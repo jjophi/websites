@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Searching</title>
+<style>
+.container{
+    width: 1000px;
+}
+.listing .item{
+    display: none;
+}
+.listing .item.show{
+    display: block;
+}
+</style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="search-fields">
+            <label for="cat">Category 
+                <select name="cat" id="cat">
+                    <option value="all">all</option>
+                    <option value="kl">kl</option>
+                    <option value="mh">mh</option>
+                    <option value="py">py</option>
+                    <option value="tn">tn</option>
+                    <option value="mp">mp</option>
+                    <option value="dl">dl</option>
+                </select>
+            </label>
+            <label for="filter">Filter 
+                <select name="filter" id="filter">
+                    <option value="all">all</option>
+                    <option value="print">print</option>
+                    <option value="video">video</option>
+                </select>
+            </label>
+        </div>
+        <div class="listing">
+            <p class="item kl print">category: kl | filter: print</p>
+            <p class="item mh video">category: mh | filter: video</p>
+            <p class="item py print">category: py | filter: print</p>
+            <p class="item tn video">category: tn | filter: video</p>
+            <p class="item tn print">category: tn | filter: print</p>
+            <p class="item mh video">category: mh | filter: video</p>
+            <p class="item ap print">category: ap | filter: print</p>
+            <p class="item kl video">category: kl | filter: video</p>
+            <p class="item tn video">category: tn | filter: video</p>
+            <p class="item up video">category: up | filter: video</p>
+            <p class="item kl print">category: kl | filter: print</p>
+            <p class="item mp print video">category: mp | filter: print video</p>
+            <p class="item kl print video">category: kl | filter: print video</p>
+            <p class="item dl">category: dl | filter: --</p>
+        </div>
+    </div>
+
+<script>
+let cat = document.getElementById('cat');
+let filter = document.getElementById('filter');
+
+let catSelected = '';
+let filterSelected = '';
+
+cat.addEventListener('change', catChanged);
+filter.addEventListener('change', filterChanged);
+
+function catChanged(event) {
+    catSelected = event.target.value == 'all' ? '' : '.' + event.target.value;
+    showItems();
+}
+function filterChanged(event) {
+    filterSelected = event.target.value == 'all' ? '' : '.' + event.target.value;
+    showItems();
+}
+
+function removeItemClass() {
+    let itemList = document.querySelectorAll('.show');
+    if(itemList.length) {
+        itemList.forEach(item => {
+            item.classList.remove('show');
+        });
+    }
+    
+}
+
+function showItems() {
+    let query = `.item${catSelected}${filterSelected}`;
+    if(query) {
+        let filteredItems = document.querySelectorAll(query);
+        removeItemClass();
+        filteredItems.forEach(item => {
+            item.classList.add('show');
+        })
+    }
+    
+}
+
+showItems();
+</script>
+</body>
+</html>
