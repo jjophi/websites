@@ -272,8 +272,13 @@ a{
 }
 .video-tour{
     width: 100%;
+    max-width: 1960px;
     height: 600px;
-    background-color: #0C5E95;
+    background: linear-gradient(to right, rgba(12, 94, 149, 0.8), rgba(12, 94, 149, 0.8)), 
+                url(../images/videobg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     position: relative;
 }
 .video-btn{
