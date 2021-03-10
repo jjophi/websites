@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+<style>
+.range-slider{
+    width: 600px;
+    
+    --leftVal: 40;
+    --rightVal: 40;
+    --sliderHeight: 10px;
+    --sliderBorderRadius: 6px;
+}
+.range-slider .slider-wrap {
+    width: 100%;
+    height: var(--sliderHeight);
+    position: relative;
+    display: flex;
+}
+.range-slider .slider {
+    height: 100%;
+}
+.range-slider  .left{
+    background-color: #ffa500;
+    flex: none;
+    width: calc(var(--leftVal) * 1%);
+    border-radius: var(--sliderBorderRadius) 0 0 var(--sliderBorderRadius);
+}
+.range-slider .right{
+    background-color: #ff4500;
+    flex: none;
+    width: calc(var(--rightVal) * 1%);
+    border-radius: 0 var(--sliderBorderRadius) var(--sliderBorderRadius) 0;
+}
+.range-slider  .center{
+    background-color: #ccc;
+    flex: none;
+    flex: 1 1 auto;
+}
+
+/*buttons*/
+.range-slider .slider-btns{
+    position: relative;
+    width: 100%;
+}
+.range-slider .btn{
+    position: absolute;
+    top: 2px;
+    cursor: pointer;
+
+    width: 0;
+    height: 0;
+    margin-left: -8px;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 12px solid #ccc;
+}
+.range-slider .btn-left{
+    left: calc(var(--leftVal) * 1%);
+}
+.range-slider .btn-right{
+    left: calc((100 - var(--rightVal)) * 1%);
+}
+
+.range-slider .btn-left::after, 
+.range-slider .btn-right::after{
+    content: '';
+    position: absolute;
+    width: var(--sliderHeight);
+    height: var(--sliderHeight);
+    top: -12px;
+    border-radius: 50%;
+    background-color: #2854a5;
+    margin-left: -5px;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+}
+
+</style>
+</head>
+<body>
+
+    <div class="range-slider">
+        <div class="slider-wrap" >
+            <div class="slider left" ></div>
+            <div class="slider center"></div>
+            <div class="slider right" ></div>
+        </div>
+        <div class="slider-btns">
+            <div class="btn btn-left"></div>
+            <div class="btn btn-right"></div>
+        </div>
+    </div>
+
+<script>
+    let leftWidth = 40;
+    let rightWidth = 40;
+    let sliderWrap = document.querySelector('.range-slider');
+    sliderWrap.setAttribute('style', `--leftVal:${leftWidth}; --rightVal:${rightWidth}`);
+
+
+    //only for testing.
+    setInterval(getWidthValue, 3000);
+    function getWidthValue() {
+        let val1 = Math.floor(Math.random()*40);
+        let val2 = Math.floor(Math.random()*40);
+        leftWidth = val1;
+        rightWidth = val2;
+        sliderWrap.setAttribute('style', `--leftVal:${leftWidth}; --rightVal:${rightWidth}`);
+    }
+</script>
+</body>
+</html>
